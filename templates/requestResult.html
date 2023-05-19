@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ANOMALY DETECT | PROJECT</title>
+
+    <!--Add the CSS-->
+    <style>
+        body{
+            background-color: black;
+        }
+        h1{
+            color: black;
+            text-transform: uppercase;
+            border: 2px solid green;
+            border-radius: 7px;
+            background-color: green;
+            text-align: center;
+            padding: 8px;
+            margin-top: 35px;
+        }
+        #outerData{
+            border: 2px solid green;
+            border-radius: 7px;
+            width: 30%;
+            margin-left: 441px;
+            margin-top: 50px;
+            background-color: green;
+        }
+        #outerData #innerData{
+            margin-left: 70px;
+        }
+        #outerData #innerData #spam{
+            margin-left: 25px;
+        }
+
+        #outerData #innerData textarea{
+            border: 3px solid white;
+            border-radius: 5px;
+        }
+        #outerData #innerData #button{
+            width:57%;
+            margin-top: 5px;
+            margin-bottom: 7px;
+            background-color: black;
+            color: white;
+            border: 3px solid black;
+            border-radius: 5px;
+            text-transform: uppercase;
+            padding: 2px;
+        }
+        #outerData #innerData #prediction{
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        #outerData #innerData .label{
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anomaly Detection System</h1>
+    <div id = "outerData">
+        <div id = "innerData">
+            <h3 id = "spam">Anomaly Detector</h3>
+            <form action = "{{url_for('process_request')}}" method = "post">
+                <!-- 
+                 -->
+                    <label >Login TimeStamp</label><br>
+                    <input type="text" placeholder="Enter Login TimeStamp" name = "logintime" class="label"><br>
+
+                    <lable >User ID</lable><br>
+                    <input type="text" placeholder="Enter UserID" name="User" class="label"><br>
+
+                    <lable >IP Address</lable><br>
+                    <input type="text" placeholder="Enter IP Address" name="ip" class="label"><br>
+
+                    <lable >Country</lable><br>
+                    <input type="text" placeholder="Enter Country" name="country" class="label"><br>
+
+                    <lable >Region</lable><br>
+                    <input type="text" placeholder="Enter Region" name="region" class="label"><br>
+
+                    <lable >City</lable><br>
+                    <input type="text" placeholder="Enter City" name="city" class="label"><br>
+
+                    <lable >Browser Name</lable><br>
+                    <input type="text" placeholder="Enter Browser Name" name="browser" class="label"><br>
+
+                    <lable >Device Type</lable><br>
+                    <input type="text" placeholder="Enter Device Type" name="device" class="label"><br>
+
+                    <input type="submit" value="predict" id="button">
+
+            </form>
+
+            <div id = "prediction">
+                {% if prediction == "NOT DETECT" or prediction == "DETECT" %}
+                    <h3>{{prediction}}</h3>
+                {% endif %}  
+            </div>
+
+
+        </div>
+        
+    </div>
+    
+</body>
+</html>
