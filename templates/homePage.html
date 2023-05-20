@@ -1,25 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>ANOMALY DETECT | PROJECT</title>
-    <!--Add the CSS-->
+    <title>Anomaly Detection</title>
+    <!-- Add the CSS -->
     <style>
-        body{
+        body {
             background-color: black;
         }
-        #title{
+
+        #title {
             color: white;
             text-transform: uppercase;
-            text-align: center;   
-            margin-top: 280px; 
+            text-align: center;
+            margin-top: 280px;
+        }
+
+        #button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #request-button {
+            padding: 10px 20px;
+            background-color: #ffffff;
+            color: black;
+            border: none;
+            cursor: pointer;
         }
     </style>
-
 </head>
 <body>
-    <div id = "title">
-        <h1>Welcome, to Anomaly Detection Project</h1>
+    <div id="title">
+        <h1>Welcome to the Anomaly Detection Project</h1>
     </div>
-    
+
+    <div id="button-container">
+        <button id="request-button" onclick="location.href='/input_data'">Test Data</button>
+    </div>
 </body>
 </html>
