@@ -100,5 +100,34 @@ Handling Binary Target Variable -
 1) The trained Decision Tree Classifier model is saved using the pickle.dump function.
 2) The encoder object used for label encoding is also saved using pickle.dump.
 3) These saved models can be loaded and used for future anomaly detection tasks.
+ 
+**App.py Script:**
 
+1) Implements a Flask application - The script utilizes the Flask module to create a web application for the Anomaly Detection System.
+2) Handles user input - It includes routes to handle user requests and collect input data from web forms.
+3) Loads pre-trained model and encoder - The script uses the pickle module to load a pre-trained model and a LabelEncoder from pickle files.
+4) Preprocesses input data - The script includes a preprocessing function to extract browser names and encode categorical variables using the loaded encoder.
+5) Displays prediction results - Based on the user's input, the script makes predictions using the pre-trained model and displays the results on the web page.
+
+**Templates:**
+
+1) homePage.html - This template represents the home page of the Anomaly Detection web application. It features a visually appealing layout with a centered title and a button for requesting anomaly detection.
+2) CSS Styling - The template includes custom CSS styling to enhance the visual presentation. It sets the background color, font styles, button appearance, and container layouts to create an intuitive user interface.
+3) requestPage.html - This template is used to display the input form for collecting user data to be analyzed for anomaly detection. It provides input fields for login timestamp, user ID, IP address, country, region, city, browser name, and device type.
+4) Dynamic Rendering - The template uses Flask's templating engine to dynamically render the prediction result. It includes an if-else statement to conditionally display the prediction outcome based on the result obtained from the server.
+5) CSS Styling for requestPage.html - Similar to the home page template, the requestPage.html template also includes custom CSS styling. It sets the background color, border styles, font styles, and container layouts to maintain consistency with the overall design of the application.
+
+**Implemented Features:**
+
+1) Anomaly Detection and Pattern Recognition - The implemented system accurately detects anomalies in the given data and effectively recognizes patterns to distinguish normal and abnormal behavior.
+2) Efficient and Scalable Model - The implemented model is designed to be efficient and scalable, allowing it to handle large datasets and perform anomaly detection in real-time or near-real-time scenarios.
+3) Reason and Attribute Prediction - The model goes beyond simple anomaly detection by providing insights into the reasons for the anomalies and identifying the attribute(s) responsible for them. This helps in understanding the underlying causes and facilitating effective troubleshooting.
+4) User Interface (UI) - A user-friendly web-based UI is developed using Flask and HTML templates. It allows users to input data, submit requests for anomaly detection, and receive prediction results in a visually appealing and intuitive manner.
+5) Backend Functionality - The implemented system includes a backend component that processes user requests, applies the trained model for anomaly detection, and generates prediction outcomes. It utilizes Flask's routing capabilities to handle different request endpoints and deliver appropriate responses.
+
+**Some Screenshots:**
+
+![Screenshot (1)](https://github.com/Sarthak-Sharma03/Hackathon-Project/assets/78611655/3aa0ef3e-f71f-4e5a-b7c8-912a75aefdd4)
+
+![Screenshot (2)](https://github.com/Sarthak-Sharma03/Hackathon-Project/assets/78611655/312006de-e524-4fc6-9d42-2adca57baea7)
 
