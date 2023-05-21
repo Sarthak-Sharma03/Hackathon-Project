@@ -40,10 +40,11 @@ Data Preparation
 The data preparation phase is an important step in building an anomaly detection system. It involves loading the dataset, handling missing values, checking for duplicates, and gaining an understanding of the dataset's structure.
 
 1) Importing Libraries.
-2) Loading the Dataset.
+2) Loading the Dataset. (Please note the dataset currently uploaded in the repository is only a sample of the actual raw data.)
 3) Dataset Exploration:
    
    a) The first few rows of the dataset are displayed using the head function.
+   
    b) The shape of the dataset is printed using the shape attribute, which shows the number of rows and columns.
    c) The number of duplicated data instances in the dataset is calculated using the duplicated function.
    d) The count of missing values in each column is obtained using the isnull function.
