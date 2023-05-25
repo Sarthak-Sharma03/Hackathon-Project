@@ -1,0 +1,6 @@
+flask
+pickle
+seaborn
+pandas
+numpy
+hashlib
